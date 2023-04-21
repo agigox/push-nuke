@@ -9,7 +9,8 @@ export const pmaxSlice = createSlice({
   initialState,
   reducers: {
     loadPmaxSuccess: (state, action) => {
-      return { ...state, items: action.payload };
+      const { items } = action.payload;
+      return { ...state, items };
     },
     loadPmaxFail: (state, action) => {
       return { ...state, error: action.payload.error };

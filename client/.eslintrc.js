@@ -15,7 +15,6 @@ module.exports = {
   extends: ['airbnb', 'prettier'],
   plugins: ['prettier'],
   rules: {
-    'prettier/prettier': ['error', prettierOptions],
     'react/prop-types': 'off',
     'import/prefer-default-export': 'off',
     'no-debugger': 'off',

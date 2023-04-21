@@ -10,6 +10,7 @@ export const selectRefItems = (state) => {
 export const selectReferentielByProductionCategory = createSelector(
   [selectRefItems, selectPmaxItems],
   (referentiel, pmaxs) => {
+    console.log(pmaxs);
     const groupByCategory = groupByKey(referentiel, 'productionCategory');
 
     groupByCategory.unshift({ key: 'ALL', values: referentiel });

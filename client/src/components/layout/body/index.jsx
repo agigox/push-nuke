@@ -28,9 +28,14 @@ function Body() {
     error: errorPmax,
     isFetching: isPmaxLoading,
   } = useGetDataQuery('pmax');
-  const data = dataItems && dataReferentiel && dataPmax;
-  const error = errorItems && errorReferentiel && errorPmax;
-  const loading = isItemsLaoding && isReferentielLoading && isPmaxLoading;
+  const {
+    data: dataBilan,
+    error: errorBilan,
+    isFetching: isBilanLoading,
+  } = useGetDataQuery('bilan');
+  const data = dataBilan && dataItems && dataReferentiel && dataPmax;
+  const error = dataBilan && errorItems && errorReferentiel && errorPmax;
+  const loading = isItemsLaoding && isReferentielLoading && isPmaxLoading && isBilanLoading;
 
   useEffect(() => {
     setLoadingUI(loading);
