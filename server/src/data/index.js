@@ -32,7 +32,7 @@ export const pmax = readCSV(
   fs.readFileSync(path.join(__dirname, './pmax.csv'), 'utf8'),
 ).map(({productionCategory, pmax}) => {
   return ({
-  key: productionCategory,
+    productionCategory: productionCategory,
   pmax: Number(pmax),
 })});
 
