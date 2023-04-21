@@ -1,0 +1,209 @@
+[
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "17W100P100P0076C",
+        "bilanName": "Meuse",
+        "RegroupementHydro": "Meuse",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "17W100P100P0323L",
+        "bilanName": "Jura-Vosges",
+        "RegroupementHydro": "Jura-Vosges",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "17W100P100P0327D",
+        "bilanName": "Rhin",
+        "RegroupementHydro": "Rhin",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "",
+        "bilanName": "Nord-Ouest",
+        "RegroupementHydro": "Nord-Ouest",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "",
+        "bilanName": "Rhône Nord",
+        "RegroupementHydro": "Rhône",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "17W100P100P0325H",
+        "bilanName": "Rhône Sud",
+        "RegroupementHydro": "Rhône",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "",
+        "bilanName": "Arve",
+        "RegroupementHydro": "Alpes Nord",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "17W100P100P0326F",
+        "bilanName": "Beaufortain",
+        "RegroupementHydro": "Alpes Nord",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-17T00:00:00+01:00",
+        "dataDate": "2023-03-17T00:00:00+01:00",
+        "bilanId": "17W000001017800G",
+        "bilanName": "Tarentaise",
+        "RegroupementHydro": "Alpes Nord",
+        "installedCapacity": 1200,
+        "production": 132
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W100P100P0319C",
+        "bilanName": "Maurienne",
+        "RegroupementHydro": "Alpes Nord",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W100P100P0321P",
+        "bilanName": "Romanche",
+        "RegroupementHydro": "Alpes Nord",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W100P100P0320R",
+        "bilanName": "Drac",
+        "RegroupementHydro": "Alpes Nord",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017795K",
+        "bilanName": "Basse-Isère",
+        "RegroupementHydro": "Alpes Nord",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017796I",
+        "bilanName": "Durance-Verdon",
+        "RegroupementHydro": "Alpes Provence",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017797G",
+        "bilanName": "Alpes-Maritimes",
+        "RegroupementHydro": "Alpes Provence",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017798E",
+        "bilanName": "Adour-Gaves",
+        "RegroupementHydro": "Pyrénées",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017790U",
+        "bilanName": "Garonne-Ariège",
+        "RegroupementHydro": "Pyrénées",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017789F",
+        "bilanName": "Aude-Têt",
+        "RegroupementHydro": "Pyrénées",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017794M",
+        "bilanName": "Ardèche",
+        "RegroupementHydro": "Massif Central",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017792Q",
+        "bilanName": "Tarn",
+        "RegroupementHydro": "Massif Central",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017788H",
+        "bilanName": "Lot-Truyère",
+        "RegroupementHydro": "Massif Central",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017791S",
+        "bilanName": "Dordogne",
+        "RegroupementHydro": "Massif Central",
+        "installedCapacity": 1400,
+        "production": 232
+    },
+    {
+        "generationDate": "2023-03-18T00:00:00+01:00",
+        "dataDate": "2023-03-18T00:00:00+01:00",
+        "bilanId": "17W000001017791S",
+        "bilanName": "Loire-Vienne",
+        "RegroupementHydro": "Massif Central",
+        "installedCapacity": 1400,
+        "production": 232
+    }
+]

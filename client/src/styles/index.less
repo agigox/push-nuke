@@ -1,0 +1,421 @@
+@import "./fonts.less";
+@import "./variables.less";
+@import "./mixins.less";
+@import "./positions.less";
+@media only screen and (max-width: 767px) {
+  @import "./positions_mobile.less";
+}
+body {
+  font-family: @font-family-nunito-regular;
+  color: @global-color;
+  margin: 0;
+  height: 100%;
+  
+}
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+[class^="ant-col"], [class*=" ant-col"] {
+  font-family: @font-family-nunito-regular;
+}
+.ant-btn {
+  font-family: 'NunitoSansBold';
+  font-size: 13px;
+  line-height: 28px;
+  border-radius: 4px;
+  @media only screen and (max-width: 767px) {
+    font-family: 'NunitoSansRegular';
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 2px;
+  }
+}
+.ant-btn-primary:not(:disabled):hover {
+  background-color: @background-page-title;
+}
+.ant-card {
+  .ant-card-head {
+    padding: 30px 28px 0;
+    .ant-card-head-title {
+      .format-text(@font-family-nunito-bold, 20px, 28px, @background-page-title);
+      font-weight: 700;
+    }
+  }
+  
+  .ant-card-body {
+    background: @color-white;
+    box-shadow: 0px 4px 25px rgba(0, 2, 44, 0.08);
+    border-radius: 8px;
+    padding: 33.5px;
+  }
+}
+.recharts-tooltip-wrapper {
+  z-index:99;
+}
+.ant-modal {
+  .ant-modal-content {
+    padding: 50px 50px;
+  }
+}
+/*My code*/
+
+.iconIndispo {
+  background: linear-gradient(206.04deg, #FC1C1C 21.73%, #BC372E 83.59%);
+}
+.iconDispo {
+  background: linear-gradient(182.12deg, #1CFC4D 7.61%, #25C448 94.18%);
+}
+.card-row {
+  background: @color-white;
+  border: 1px solid @border-color-card;
+  box-shadow: @modal-shadow-card;
+  border-radius: @border-radius-card;
+  padding: 28px;
+  flex-direction: column;
+}
+.card-title {
+  font-family: @font-family-inter-thin;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 15px;
+  color: @global-color;
+}
+.card-childrens {
+  width: 274px;
+}
+.card-child {
+  height: 58px;
+  width: 274px;
+  border: 1px solid;
+}
+.handle {
+  border: 1px solid red;
+}
+.title-main-col {
+  font-family: 'InterLight';
+  font-size: 16px;
+  line-height: 19px;
+  font-style: italic;
+}
+.reactor-data {
+  padding-left: 10px;
+  padding-bottom: 2px;
+  background: @color-white;
+  border: 1px solid @border-color-card;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+.divider {
+  border-color: @divider-border-color;
+}
+@media only screen and (max-width: 767px) {
+  .title-main-col {
+    text-align: center;
+  }
+}
+.footer {
+  height: 74px;
+  background-color: @background-header-footer;
+}
+.header {
+  height: 84px;
+  background-color: @background-header-footer;
+}
+.dashboard {
+  background-color: @background-dashboard;
+  .page-title {
+    background-color: @background-page-title;
+    .text {
+      padding: 32px 130px 32px 126px;
+      .format-text(@font-family-nunito-extra-bold, 48px, 64px, @color-white);
+    }
+  }
+  
+}
+.slices {
+  .slices-title-page {
+    font-family: 'Nunito Sans';
+    .format-text(@font-family-nunito-regular, 20px, 28px, @color-white);
+    font-weight: 700;
+  }
+  .slices-category-row {
+    row-gap: 5px;
+  }
+  .slice {
+    background-color: @slice-background-color;
+    padding: 9px 4px 12px;
+    box-shadow: 0px 4px 24px rgba(38, 41, 66, 0.06);
+    border-radius: 5px;
+    row-gap: 8px;
+    .slice-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 13px;
+      color: @color-white;
+      word-break: break-all;
+      height: 41px;
+    }
+    .slice-content-row {
+      row-gap: 5px;
+      column-gap: 16px;
+      .slice-content-pmax {
+        .format-text(@font-family-nunito-regular, 9.5px, 14px, @color-grey);
+        font-style: italic;
+        text-align: right;
+  
+      }
+      .slice-content-col {
+        height: 54px;
+        &.up-slice-green{
+          background: linear-gradient(203.32deg, #34c501 19.29%, #41e03e 81.34%);
+        }
+        &.fully-slice-red {
+          background: linear-gradient(203.32deg, #C02924 19.29%, #D0574F 81.34%);
+        }
+        &.prod-sub-slice-blue {
+          background: linear-gradient(203.32deg, #0079D1 19.29%, #36B3DF 81.34%);
+        }
+        &.hashed-slice {
+          /*
+          background: repeating-linear-gradient(
+            45deg,
+            #34c501 0px,
+            #34c501 4px,
+            #0079D1 4px,
+            #0079D1 8px
+          );
+          */
+          background: linear-gradient(203.32deg, #0079D1 19.29%, #41E03E 81.34%);
+        }
+        .slice-content-capacity {
+          .format-text(@font-family-nunito-bold, 16px, 22px, @color-white);
+          text-align: right;
+          padding: 0 2.2px;
+          span {
+            .format-text(@font-family-nunito-light, 16px, 22px, @color-white);
+          }
+        }
+        .slice-content-city {
+          .format-text(@font-family-manrope-regular, 11px, 15px, @color-white);
+          word-break: break-all;
+          padding: 0 6px;
+        }
+      }
+    }
+    
+  }
+  .slices-content {
+    column-gap: 9px;
+    row-gap: 19px;
+    .slices-content-col {
+      width: 94px;
+    }
+  }
+}
+.main {
+  .map-container {
+    width: 935px;
+    height: 866px;
+    .position {
+      .format-text(@font-family-nunito-regular, 14px, 18px, @global-color);
+      background-color: @color-white;
+      border-radius: 8px;
+      width: 126px;
+      height: 44px;
+      padding: 4px 12px;
+      .position-icon {
+        align-self: center;
+      }
+      div {
+        text-align: left;
+      }
+    }
+  }
+}
+.refresh {
+  .refresh-text {
+    .text-1 {
+      .format-text(@font-family-nunito-regular, 14px, 18px, @color-white);
+    }
+    .text-2 {
+      .format-text(@font-family-nunito-bold, 16px, 22px, @color-white);
+    }
+  }
+}
+
+.up, .partiallyDown, .fullyDown {
+  height: 12px;
+  width: 12px;
+  border-radius: 2px;
+  position: relative;
+  bottom: 4px;
+}
+.up {
+  background-color: @up-color;
+}
+.partiallyDown {
+  background-color: @partiallyDown-color;
+}
+.fullyDown {
+  background-color: @fullyDown-color;
+}
+.percents-text {
+  .production-percent-text {
+    .text-1 {
+      .format-text(@font-family-nunito-bold, 20px, 28px, @background-page-title);
+      @media only screen and (max-width: 767px) {
+        .format-text(@font-family-nunito-bold, 13px, 21px, @background-page-title);
+      }
+    }
+    .text-2 {
+      .format-text(@font-family-nunito-extra-bold, 36px, 48px, @background-page-title);
+      @media only screen and (max-width: 767px) {
+        .format-text(@font-family-nunito-regular, 13px, 21px, @background-page-title);
+      }
+    }
+    .text-unit {
+      .format-text(@font-family-nunito-extra-bold, 16px, 22px, @background-page-title);
+      @media only screen and (max-width: 767px) {
+        .format-text(@font-family-nunito-regular, 13px, 21px, @background-page-title);
+      }
+    }
+    .text-unit-percent {
+      .format-text(@font-family-nunito-bold, 20px, 28px, @background-page-title);
+      @media only screen and (max-width: 767px) {
+        .format-text(@font-family-nunito-regular, 13px, 21px, @background-page-title);
+      }
+    }
+  }
+  .rest-percent-text, .unavailable-percent-text {
+    .text-1 {
+      .format-text(@font-family-nunito-regular, 16px, 22px, @background-page-title);
+      @media only screen and (max-width: 767px) {
+        .format-text(@font-family-nunito-regular, 13px, 21px, @background-page-title);
+      }
+    }
+    .text-2 {
+      .percents-row {
+        .text-1-1 {
+          .format-text(@font-family-nunito-bold, 20px, 28px, @background-page-title);
+          @media only screen and (max-width: 767px) {
+            .format-text(@font-family-nunito-regular, 13px, 21px, @background-page-title);
+          }
+        }
+        .text-1-2 {
+          .format-text(@font-family-nunito-extra-bold, 16px, 22px, @background-page-title);
+          @media only screen and (max-width: 767px) {
+            .format-text(@font-family-nunito-regular, 13px, 21px, @background-page-title);
+          }
+        }
+        .text-1-3 {
+          .format-text(@font-family-nunito-extra-bold, 16px, 22px, @background-page-title);
+          @media only screen and (max-width: 767px) {
+            .format-text(@font-family-nunito-regular, 13px, 21px, @background-page-title);
+          }
+        }
+      }
+      .format-text(@font-family-nunito-regular, 20px, 28px, @background-page-title);
+    }
+  }
+}
+.bottom-sider-body {
+  .total-col {
+    .format-text(@font-family-nunito-regular, 13px, 28px, @background-page-title);
+    font-style: italic;
+  }
+  .text-1 {
+    .format-text(@font-family-nunito-regular, 16px, 22px, @background-page-title);
+    font-weight: 800;
+  }
+  .text-2 {
+    .format-text(@font-family-nunito-bold, 36px, 48px, @background-page-title);
+    font-weight: 800;
+  }
+}
+.bar-indication {
+  .title {
+    .format-text(@font-family-nunito-regular, 14px, 18px, @color-black);
+    text-transform: uppercase;
+  }
+  .pmax {
+    .format-text(@font-family-nunito-light, 14px, 18px, @pmax-color);
+    font-style: italic;
+  }
+  .percents {
+    .down-percent {
+      .format-text(@font-family-nunito-extra-bold, 16px, 22px, @blue-color);
+    }
+    .prod-percent {
+      .format-text(@font-family-nunito-extra-bold, 16px, 22px, @green-color);
+    }
+  }
+}
+.pie-chart {
+  .hydraulics-number {
+    .format-text(@font-family-nunito-extra-bold, 16px, 22px, @global-color);
+  }
+}
+.header {
+  .text-1 {
+    .format-text(@font-family-nunito-semi-bold, 14px, 18px, @color-white);
+  }
+  .text-1 {
+    .format-text(@font-family-nunito-regular, 10px, 14px, @color-white);
+  }
+}
+.go-to-top {
+  .go-top-text {
+    .format-text(@font-family-nunito-bold, 14px, 19px, @go-top-text);
+  }
+}
+.modals-general {
+  background-color: @color-white;
+  padding: 56px 16px;
+  .title {
+    .format-text(@font-family-nunito-semi-bold, 24px, 32px, @color-black);
+    text-transform: uppercase;
+  }
+}
+.secteur-details {
+  .sector-title {
+    .format-text(@font-family-nunito-regular, 24px, 32px, @color-black);
+    text-transform: uppercase;
+  }
+  .marks-text {
+    .format-text(@font-family-nunito-regular, 14px, 18px, @color-black);
+    width: 100px;
+  }
+}
+h1 {
+  font-size: 16px;
+}
+.boldBody {
+  font-family: 'NunitoSansExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+}
+.regularBody {
+  font-family: 'NunitoSansLight';
+  font-size: 14px;
+  line-height: 23px;
+  color:#767676;
+  font-style: italic;
+}
+.supportText {
+  font-family: 'NunitoSansLightItalic';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+}
+.separatorPoint {
+  width: 4px;
+  height: 4px;
+  background: #767676;
+  border-radius: 2px;
+}

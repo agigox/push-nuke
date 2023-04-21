@@ -1,0 +1,8 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": "3001"
+  },
+  "RTE_API_KEY": "YjYzM2Q2NmItZGY4Ny00NjQ5LTlkMTgtZDBkYmY1MWUxMTU4OjljNzMyNjJkLTI5NGItNDdlMS1iOGIwLTM3ZTcxZWI4YmM5NA==",
+  "RTE_API": "https://digital.iservices.rte-france.com"
+}
