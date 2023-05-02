@@ -94,7 +94,6 @@ function SectorDetails() {
           </Col>
           <Col span={24}>
             {categories.map((category) => {
-              console.log(category);
               return (
                 <SectorItem
                   key={category.key}

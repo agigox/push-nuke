@@ -50,10 +50,7 @@ const buildApi = (environment) => {
 
   app.get('/data', serviceWrapper(getData, environment));
   app.get('/pmax', (req, res) => {
-    res.json({
-      length: pmax.length,
-      items: pmax,
-    });
+    res.json(pmax);
   });
   app.get('/bilan', (req, res) => {
     res.json({
@@ -72,10 +69,7 @@ const buildApi = (environment) => {
     res.json({ status: 'OK' });
   });
   app.get('/referentiel', (req, res) => {
-    res.json({
-      length: referentiel.length,
-      items: referentiel,
-    });
+    res.json(referentiel);
   });
 
   app.use(notFoundMiddleware());

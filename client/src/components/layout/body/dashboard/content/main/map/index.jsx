@@ -10,6 +10,25 @@ import Rive3 from 'images/rive-3.svg';
 import Rive4 from 'images/rive-4.svg';
 import Rive5 from 'images/rive-5.svg';
 import Rive6 from 'images/rive-6.svg';
+import Rive7 from 'images/rive-7.svg';
+import Rive8 from 'images/rive-8.svg';
+import Rive9 from 'images/rive-9.svg';
+import Rive10 from 'images/rive-10.svg';
+import Rive11 from 'images/rive-11.svg';
+import Rive12 from 'images/rive-12.svg';
+import Rive12L from 'images/rive-12-l.svg';
+import Rive13 from 'images/rive-13.svg';
+import Rive13L from 'images/rive-13-l.svg';
+import Rive14 from 'images/rive-14.svg';
+import Rive14L from 'images/rive-14-l.svg';
+import Rive15 from 'images/rive-15.svg';
+import Rive15L from 'images/rive-15-l.svg';
+import Rive16 from 'images/rive-16.svg';
+import Rive16L from 'images/rive-16-l.svg';
+import Rive17 from 'images/rive-17.svg';
+import Rive18 from 'images/rive-18.svg';
+import Rive19 from 'images/rive-19.svg';
+import Rive20 from 'images/rive-20.svg';
 import { selectCurrentCategory } from 'redux/selectors/crossSelectors';
 import { selectPerUnitByFieldAndProductionUnit } from 'redux/selectors/dataSelectors';
 import useDeviceDetect from 'utils/useDeviceDetect';
@@ -70,6 +89,25 @@ function Map() {
             <img src={Rive4} alt="rive-4" className="rive-4 rives" />
             <img src={Rive5} alt="rive-5" className="rive-5 rives" />
             <img src={Rive6} alt="rive-6" className="rive-6 rives" />
+            <img src={Rive7} alt="rive-7" className="rive-7 rives" />
+            <img src={Rive8} alt="rive-8" className="rive-8 rives" />
+            <img src={Rive9} alt="rive-9" className="rive-9 rives" />
+            <img src={Rive10} alt="rive-10" className="rive-10 rives" />
+            <img src={Rive11} alt="rive-11" className="rive-11 rives" />
+            <img src={Rive12} alt="rive-12" className="rive-12 rives" />
+            <img src={Rive12L} alt="rive-12-l" className="rive-12-l rives" />
+            <img src={Rive13} alt="rive-13" className="rive-13 rives" />
+            <img src={Rive13L} alt="rive-13-l" className="rive-13-l rives" />
+            <img src={Rive14} alt="rive-14" className="rive-14 rives" />
+            <img src={Rive14L} alt="rive-14-l" className="rive-14-l rives" />
+            <img src={Rive15} alt="rive-15" className="rive-15 rives" />
+            <img src={Rive15L} alt="rive-15-l" className="rive-15-l rives" />
+            <img src={Rive16} alt="rive-16" className="rive-16 rives" />
+            <img src={Rive16L} alt="rive-16-l" className="rive-16-l rives" />
+            <img src={Rive17} alt="rive-17" className="rive-17 rives" />
+            <img src={Rive18} alt="rive-18" className="rive-18 rives" />
+            <img src={Rive19} alt="rive-19" className="rive-19 rives" />
+            <img src={Rive20} alt="rive-20" className="rive-20 rives" />
           </>
         )}
         {dataGroupedByField.values.map((referentielItem) => {

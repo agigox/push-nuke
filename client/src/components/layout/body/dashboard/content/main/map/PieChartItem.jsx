@@ -9,7 +9,6 @@ import BarIndication from './BarIndication';
 function PieChartItem({ data, productionUnitName, pmax }) {
   const isMobile = useDeviceDetect();
   const handleClick = () => {
-    // console.log('A click');
     return 33;
   };
   const getSize = () => {

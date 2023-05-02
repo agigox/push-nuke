@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { loadPmaxFail, loadPmaxSuccess } from 'redux/reducers/pmaxReducer';
-import { loadBilanFail, loadBilanSuccess } from 'redux/reducers/bilanReducer';
 import { loadDataFail, loadDataSuccess } from 'redux/reducers/dataReducer';
 import {
   loadReferentielFail,
@@ -11,7 +10,10 @@ const { REACT_APP_NUKE_API } = process.env;
 // Define a service using a base URL and expected endpoints
 export const dataApi = createApi({
   reducerPath: 'dataApi',
-  baseQuery: fetchBaseQuery({ baseUrl: REACT_APP_NUKE_API }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: REACT_APP_NUKE_API,
+    mode: 'cors',
+  }),
   endpoints: (builder) => {
     return {
       getData: builder.query({
@@ -28,8 +30,6 @@ export const dataApi = createApi({
               dispatch(loadDataSuccess(data));
             } else if (url === 'pmax') {
               dispatch(loadPmaxSuccess(data));
-            } else if (url === 'bilan') {
-              dispatch(loadBilanSuccess(data));
             }
           } catch (err) {
             // `onError` side-effect
@@ -39,8 +39,6 @@ export const dataApi = createApi({
               dispatch(loadDataFail(err));
             } else if (url === 'pmax') {
               dispatch(loadPmaxFail(err));
-            } else if (url === 'bilan') {
-              dispatch(loadBilanFail(err));
             }
           }
         },

@@ -40,9 +40,6 @@ export const getData = async (input, { rteToken }) => {
     params: { ...params, status: 'ACTIVE', last_version: true },
     token: rteToken,
   });
-  console.log(
-    responseProdPerProductionType.actual_generations_per_production_type,
-  );
   const itemsPerProductionType =
     responseProdPerProductionType.actual_generations_per_production_type.map(
       (item) => ({

@@ -2,7 +2,7 @@ import { createSelector } from '@reduxjs/toolkit';
 import { selectCurrentCategory } from './crossSelectors';
 
 export const selectPmaxItems = (state) => {
-  return state.pmax.items;
+  return [...state.pmax.items, { productionCategory: 'SOLAR', pmax: 61370 }];
 };
 export const selectPmaxCapacityByCategory = createSelector(
   [
