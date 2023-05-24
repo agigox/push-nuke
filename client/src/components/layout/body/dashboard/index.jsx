@@ -3,7 +3,6 @@ import { Row, Col } from 'antd';
 import useDeviceDetect from 'utils/useDeviceDetect';
 import PageTitle from './PageTitle';
 import Content from './content';
-import GoTop from './GoTop';
 
 function Dashboard() {
   const isMobile = useDeviceDetect();
@@ -17,11 +16,6 @@ function Dashboard() {
       <Col span={24} className="overview-col">
         <Content />
       </Col>
-      {!isMobile && (
-        <Col span={24}>
-          <GoTop />
-        </Col>
-      )}
     </Row>
   );
 }

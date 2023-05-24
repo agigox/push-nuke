@@ -6,7 +6,7 @@ import { Cell, Pie, PieChart, Tooltip } from 'recharts';
 import useDeviceDetect from 'utils/useDeviceDetect';
 import BarIndication from './BarIndication';
 
-function PieChartItem({ data, productionUnitName, pmax }) {
+function PieChartItem({ data, productionUnitName, pmax, productionCategory }) {
   const isMobile = useDeviceDetect();
   const handleClick = () => {
     return 33;
@@ -54,6 +54,7 @@ function PieChartItem({ data, productionUnitName, pmax }) {
               productionUnitPmax={pmax}
               down={data[1].value}
               prod={data[2].value}
+              productionCategory={productionCategory}
             />
           }
           style={{ zIndex: 99 }}

@@ -3,7 +3,7 @@ import { Row, Spin } from 'antd';
 import styled from '@emotion/styled';
 
 const StyledRow = styled(Row)`
-  height: calc(100vh - 158px);
+  height: 100vh;
   background-color: #19252a;
   .ant-spin {
     color: white;

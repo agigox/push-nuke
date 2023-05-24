@@ -168,6 +168,7 @@ function Map() {
                       data={data}
                       productionUnitName={key}
                       pmax={productionUnitPmax}
+                      productionCategory={values[0].productionCategory}
                     />
                   </Col>
                 </Row>

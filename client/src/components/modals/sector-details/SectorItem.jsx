@@ -1,16 +1,11 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-prototype-builtins */
 import React from 'react';
 import { Col, Row } from 'antd';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import _ from 'lodash';
-import {
-  selectPerUnitByProductionCategory,
-  selectProductionByCategory,
-} from 'redux/selectors/dataSelectors';
+import { selectPerUnitByProductionCategory } from 'redux/selectors/dataSelectors';
 import { selectPmaxCapacityByCategory } from 'redux/selectors/pmaxSelectors';
-import TIDAL from 'images/sector-modal/tidal.svg';
 import RightArrow from 'images/sector-modal/arrow_right.svg';
 import { Image } from './Image';
 import { Name } from './Name';
@@ -72,7 +67,7 @@ export function SectorItem({ sector, values }) {
       <Col flex="67px">
         <Row align="middle">
           <Col className="boldBody" span={24}>
-            {`${(categoryProduction / 1000).toFixed(1)}GW`}
+            {`${(categoryProduction / 1000).toFixed(1)}GW`.replace('.', ',')}
           </Col>
         </Row>
       </Col>

@@ -6,7 +6,7 @@ const initialState = {
   itemsPerProductionUnit: [],
   itemsPerProductionType: [],
   error: {},
-  lastRefreshHour: moment().format('DD/MM/YYYY - HH[h]mm'),
+  lastUpdateDate: moment().format('DD/MM/YYYY - HH[h]mm'),
 };
 
 export const dataSlice = createSlice({
@@ -16,6 +16,9 @@ export const dataSlice = createSlice({
     loadDataSuccess: (state, action) => {
       return {
         ...state,
+        lastUpdateDate: moment(action.payload.lastUpdateDate).format(
+          'DD/MM/YYYY - HH[h]mm',
+        ),
         itemsPerProductionUnit: action.payload.itemsPerProductionUnit.items,
         itemsPerProductionType:
           action.payload.itemsPerProductionType.items.filter((item) => {

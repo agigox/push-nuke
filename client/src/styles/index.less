@@ -10,7 +10,7 @@ body {
   color: @global-color;
   margin: 0;
   height: 100%;
-  
+
 }
 html, body {
   overflow-x: hidden;
@@ -44,7 +44,7 @@ body {
       font-weight: 700;
     }
   }
-  
+
   .ant-card-body {
     background: @color-white;
     box-shadow: 0px 4px 25px rgba(0, 2, 44, 0.08);
@@ -133,7 +133,7 @@ body {
       .format-text(@font-family-nunito-extra-bold, 48px, 64px, @color-white);
     }
   }
-  
+
 }
 .slices {
   .slices-title-page {
@@ -165,7 +165,7 @@ body {
         .format-text(@font-family-nunito-regular, 9.5px, 14px, @color-grey);
         font-style: italic;
         text-align: right;
-  
+
       }
       .slice-content-col {
         height: 54px;
@@ -205,7 +205,7 @@ body {
         }
       }
     }
-    
+
   }
   .slices-content {
     column-gap: 9px;
@@ -340,9 +340,15 @@ body {
     .format-text(@font-family-nunito-regular, 14px, 18px, @color-black);
     text-transform: uppercase;
   }
+  .city {
+    .format-text(@font-family-nunito-extra-bold, 16px, 22px, @color-black);
+  }
   .pmax {
     .format-text(@font-family-nunito-light, 14px, 18px, @pmax-color);
     font-style: italic;
+    .prod-value {
+      color: @green-color;
+    }
   }
   .percents {
     .down-percent {

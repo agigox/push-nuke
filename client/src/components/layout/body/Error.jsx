@@ -4,7 +4,7 @@ import { Col, Row } from 'antd';
 import Warning from '../../../images/fully_down.svg';
 
 const StyledRow = styled(Row)`
-  height: calc(100vh - 158px);
+  height: 100vh;
   background-color: #19252a;
   flex-direction: row;
   align-content: center;

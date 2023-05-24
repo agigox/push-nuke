@@ -1,12 +1,11 @@
 import { createSelector } from '@reduxjs/toolkit';
 import _ from 'lodash';
 import { groupByKey } from '../../utils';
-import { selectBilanByProductionUnit } from './bilanSelectors';
 import { selectCurrentCategory } from './crossSelectors';
 import { selectPmaxItems } from './pmaxSelectors';
 
-export const selectLastRefreshHour = (state) => {
-  return state.data.lastRefreshHour;
+export const selectLastUpdateDate = (state) => {
+  return state.data.lastUpdateDate;
 };
 export const selectItemsPerProductionUnit = (state) => {
   return state.data.itemsPerProductionUnit;
@@ -15,22 +14,28 @@ const selectItemsPerProductionType = (state) => {
   return state.data.itemsPerProductionType;
 };
 export const selectPerUnitByProductionCategory = createSelector(
-  [selectItemsPerProductionUnit, selectBilanByProductionUnit],
-  (items, bilan) => {
-    const newBilan = bilan.map((item) => {
-      const value = item.values[0];
+  [selectItemsPerProductionUnit],
+  (items) => {
+    const newItems = items.map((item) => {
       return {
-        unitName: item.key,
-        productionUnit: item.key,
-        groupedByField: item.key,
-        pmax: value.pmax,
-        productionCapacity: value.productionCapacity,
-        productionCategory: 'HYDRAULICS',
-        unavailableCapacity: 0,
-        regroupementHydro: value.regroupementHydro,
+        ...item,
+        unitName: _.isNull(item.bilan) ? item.unitName : item.bilan.bilanName,
+        // eslint-disable-next-line no-nested-ternary
+        productionUnit: _.isNull(item.bilan)
+          ? item.productionUnit
+          : item.bilan.bilanName,
+        productionCapacity: _.isNull(item.bilan)
+          ? item.productionCapacity
+          : item.bilan.production,
+        RegroupementHydro: _.isNull(item.bilan)
+          ? item.RegroupementHydro
+          : item.bilan.RegroupementHydro,
+        groupedByField: _.isNull(item.bilan)
+          ? item.groupedByField
+          : item.bilan.RegroupementHydro,
+        isBilan: !_.isNull(item.bilan),
       };
     });
-    const newItems = [...items, ...newBilan];
     const dataByCategory = groupByKey(newItems, 'productionCategory');
     dataByCategory.unshift({ key: 'ALL', values: newItems });
 
@@ -66,6 +71,14 @@ export const selectPerUnitByProductionCategoryAndProductionUnit =
     (items, category) => {
       const { key, values } = items.find((item) => {
         return item.key === category;
+      });
+      console.log(values);
+      console.log({
+        key,
+        values: groupByKey(
+          _.orderBy(values, 'productionUnit', 'asc'),
+          'productionUnit',
+        ),
       });
 
       return {
@@ -110,7 +123,7 @@ export const selectPerUnitByProductionCategoryAndRegroupementHydro =
         return item.key === category;
       });
       const a = _.orderBy(
-        groupByKey(values, 'regroupementHydro'),
+        groupByKey(values, 'RegroupementHydro'),
         'key',
         'asc',
       );

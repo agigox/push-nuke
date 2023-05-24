@@ -1,8 +1,7 @@
 import { Col, Row } from 'antd';
 import React from 'react';
 import styled from '@emotion/styled';
-import { formatNumberToFr } from '../../../../../../../utils';
-import Travaux from '../../../../../../../images/construction.svg';
+import Travaux from 'images/construction.svg';
 
 const CustomRow = styled(Row)`
   flex-direction: row-reverse;
@@ -22,9 +21,7 @@ function SubSliceTitle({ pmax, isIconVisible }) {
         </Col>
       )}
 
-      <Col className="slice-content-pmax">{`Pmax ${formatNumberToFr(
-        pmax,
-      )}MW`}</Col>
+      <Col className="slice-content-pmax">{`Pmax ${Math.round(pmax)}MW`}</Col>
     </CustomRow>
   );
 }
