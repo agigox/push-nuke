@@ -1,8 +1,5 @@
 {
   "devDependencies": {
     "husky": "^8.0.3"
-  },
-  "dependencies": {
-    "axios": "^1.4.0"
   }
 }

@@ -7,7 +7,8 @@ import cors from 'cors';
 import compression from 'compression';
 import helmet from 'helmet';
 
-import { referentiel, pmax, bilan } from './data';
+import _ from 'lodash';
+import { referentiel, pmax, bilan, bilan1 } from './data';
 import { RTEServiceError } from './rteApi';
 
 import {
@@ -35,7 +36,13 @@ function serviceWrapper(service, environment) {
     }
   };
 }
-
+export const groupByKey = (array, key) =>
+  _.chain(array)
+    // Group the elements of Array based on `key` property
+    .groupBy(key)
+    // `key` is group's name (color), `value` is the array of objects
+    .map((value, mapKey) => ({ key: mapKey, values: value }))
+    .value();
 const buildApi = (environment) => {
   const app = express();
   const { logger } = environment;
@@ -57,6 +64,10 @@ const buildApi = (environment) => {
       length: bilan.length,
       items: bilan,
     });
+  });
+  app.get('/bilan1', (req, res) => {
+    // console.log(groupByKey(bilan1, 'RegroupementHydro'));
+    res.json(bilan1);
   });
 
   if (process.env.NODE_ENV !== 'production') {

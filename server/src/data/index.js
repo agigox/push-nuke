@@ -32,7 +32,7 @@ export const pmax = readCSV(
   fs.readFileSync(path.join(__dirname, './pmax.csv'), 'utf8'),
 ).map(({productionCategory, pmax}) => {
   return ({
-    productionCategory: productionCategory,
+  productionCategory: productionCategory,
   pmax: Number(pmax),
 })});
 
@@ -49,5 +49,19 @@ export const bilan = JSON.parse(
     productionCategory: 'HYDRAULICS',
     productionCapacity: production,
     unavailableCapacity: 0
+  }
+});
+
+export const bilan1 = JSON.parse(
+  await readFile(
+    new URL('./data3.json', import.meta.url)
+  )
+).map((item) => {
+  return {
+    unitName: item.unitName,
+    productionUnit: item.productionUnit,
+    groupedByField: item.groupedByField,
+    bilanName: item.bilan.bilanName,
+    RegroupementHydro: item.bilan.RegroupementHydro,
   }
 });
